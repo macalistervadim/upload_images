@@ -15,7 +15,7 @@ BACKEND_CORS_ORIGINS = os.getenv("BACKEND_CORS_ORIGINS", "").split(",")
 
 s3 = boto3.client(
     "s3",
-    endpoint_url=f"https://{MINIO_ENDPOINT}",
+    endpoint_url=f"http://{MINIO_ENDPOINT}",
     aws_access_key_id=MINIO_ACCESS_KEY,
     aws_secret_access_key=MINIO_SECRET_KEY,
     config=Config(signature_version="s3v4"),
